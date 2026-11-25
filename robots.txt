@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://elyjesusmb-crypto.github.io/Neon-Arena/sitemap.xml
