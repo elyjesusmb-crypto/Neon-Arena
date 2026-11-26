@@ -2060,23 +2060,110 @@ const CHARACTERS = {
     desc: 'Su habilidad se recarga un 40 % más rápido: úsala mucho más a menudo. 90 de vida.',
     stats: { hp: 0.9, speed: 1, dmg: 1, dash: 1, reload: 1, ability: 0.6, size: 1, regen: 0 },
   },
+
+  // ── Desbloqueables en el CAMINO DE TROFEOS (más fuertes) ──────────
+  fenix: {
+    id: 'fenix', name: 'Fénix', icon: '🔥', role: 'Renace', shape: 'triangle', accent: '#ff6b3d', unlock: 100,
+    desc: 'Una vez por partida, al caer, RENACE de sus cenizas con media vida. Además tiene un 10 % más de vida y daño.',
+    stats: { hp: 1.1, speed: 1.05, dmg: 1.1, dash: 0.9, reload: 1, ability: 1, size: 1, regen: 0, revive: 1 },
+  },
+  goliat: {
+    id: 'goliat', name: 'Goliat', icon: '🦍', role: 'Supertanque', shape: 'square', accent: '#ff4d6d', unlock: 300,
+    desc: '200 de vida, nadie lo mueve y pega un 15 % más fuerte. Más lento que los demás, pero casi imposible de tumbar.',
+    stats: { hp: 2, speed: 0.88, dmg: 1.15, dash: 1.15, reload: 0.9, ability: 0.9, size: 1.28, regen: 1, knock: 0.15 },
+  },
+  rayo: {
+    id: 'rayo', name: 'Rayo', icon: '💨', role: 'Supersónico', shape: 'bolt', accent: '#00ffd0', unlock: 600,
+    desc: 'El más rápido del juego (+40 %), esquiva cada medio segundo y hace un 20 % más de daño.',
+    stats: { hp: 0.95, speed: 1.4, dmg: 1.2, dash: 0.45, reload: 0.8, ability: 0.9, size: 0.9, regen: 0 },
+  },
+  oraculo: {
+    id: 'oraculo', name: 'Oráculo', icon: '🔮', role: 'Místico', shape: 'pentagon', accent: '#e07bff', unlock: 1000,
+    desc: 'Habilidad casi el doble de seguido (−50 %), se cura 3 por segundo y tiene más vida y daño.',
+    stats: { hp: 1.2, speed: 1.05, dmg: 1.15, dash: 0.85, reload: 0.85, ability: 0.5, size: 1, regen: 3 },
+  },
+  omegax: {
+    id: 'omegax', name: 'Omega X', icon: '👑', role: 'Legendario', shape: 'crown', accent: '#ffd23d', unlock: 1500,
+    desc: 'El personaje definitivo: 150 de vida, +35 % de daño, más rápido, se cura solo, renace una vez y su habilidad va un 30 % más rápida.',
+    stats: { hp: 1.5, speed: 1.15, dmg: 1.35, dash: 0.7, reload: 0.75, ability: 0.7, size: 1.05, regen: 2, revive: 1 },
+  },
+
+  // ── Camino largo (cada vez más chetados) ──────────────────────────
+  vortice: {
+    id: 'vortice', name: 'Vórtice', icon: '🌀', role: 'Controlador', shape: 'bolt', accent: '#5ce1ff', unlock: 2500,
+    desc: 'Su habilidad vuelve casi al momento (−55 %). +30 % de vida y daño y más rápido.',
+    stats: { hp: 1.3, speed: 1.15, dmg: 1.3, dash: 0.7, reload: 0.8, ability: 0.45, size: 1, regen: 1 },
+  },
+  kraken: {
+    id: 'kraken', name: 'Kraken', icon: '🐙', role: 'Bestia', shape: 'octagon', accent: '#ff5ea8', unlock: 4000,
+    desc: '240 de vida, se cura 3 por segundo, +35 % de daño y no hay quien lo empuje.',
+    stats: { hp: 2.4, speed: 0.95, dmg: 1.35, dash: 1, reload: 0.85, ability: 0.8, size: 1.3, regen: 3, knock: 0.1 },
+  },
+  espectro: {
+    id: 'espectro', name: 'Espectro', icon: '👻', role: 'Fantasma', shape: 'diamond', accent: '#d7e3ff', unlock: 6000,
+    desc: 'Rapidísimo (+45 %), esquiva casi sin parar, +40 % de daño y renace una vez.',
+    stats: { hp: 1.1, speed: 1.45, dmg: 1.4, dash: 0.35, reload: 0.75, ability: 0.8, size: 0.85, regen: 1, revive: 1 },
+  },
+  dragon: {
+    id: 'dragon', name: 'Dragón', icon: '🐉', role: 'Mítico', shape: 'star', accent: '#ff3d3d', unlock: 9000,
+    desc: '200 de vida, +50 % de daño, se cura 3 por segundo y renace una vez.',
+    stats: { hp: 2, speed: 1.15, dmg: 1.5, dash: 0.7, reload: 0.7, ability: 0.6, size: 1.15, regen: 3, revive: 1 },
+  },
+  ciborg: {
+    id: 'ciborg', name: 'Ciborg Z', icon: '🤖', role: 'Máquina', shape: 'hexagon', accent: '#8affc1', unlock: 13000,
+    desc: 'Recarga el arma el doble de rápido, +60 % de daño, 180 de vida y habilidad un 60 % más rápida.',
+    stats: { hp: 1.8, speed: 1.1, dmg: 1.6, dash: 0.7, reload: 0.5, ability: 0.4, size: 1.05, regen: 2 },
+  },
+  nebula: {
+    id: 'nebula', name: 'Nébula', icon: '🌌', role: 'Cósmica', shape: 'pentagon', accent: '#a78bff', unlock: 18000,
+    desc: '220 de vida, +70 % de daño, +30 % de velocidad, se cura 4 por segundo y renace.',
+    stats: { hp: 2.2, speed: 1.3, dmg: 1.7, dash: 0.6, reload: 0.65, ability: 0.5, size: 1, regen: 4, revive: 1 },
+  },
+  espartano: {
+    id: 'espartano', name: 'Espartano', icon: '⚔️', role: 'Guerrero', shape: 'square', accent: '#ffb02e', unlock: 25000,
+    desc: '300 de vida, +80 % de daño, se cura 5 por segundo y es imposible de empujar.',
+    stats: { hp: 3, speed: 1.1, dmg: 1.8, dash: 0.8, reload: 0.7, ability: 0.6, size: 1.25, regen: 5, knock: 0 },
+  },
+  quasar: {
+    id: 'quasar', name: 'Quásar', icon: '💫', role: 'Estelar', shape: 'crown', accent: '#7df9ff', unlock: 35000,
+    desc: 'El doble de daño, +40 % de velocidad, habilidad casi constante (−70 %) y renace.',
+    stats: { hp: 2.2, speed: 1.4, dmg: 2, dash: 0.5, reload: 0.6, ability: 0.3, size: 1, regen: 4, revive: 1 },
+  },
+  leviatan: {
+    id: 'leviatan', name: 'Leviatán', icon: '🌊', role: 'Titán marino', shape: 'octagon', accent: '#1fb6ff', unlock: 50000,
+    desc: '350 de vida, +120 % de daño, se cura 6 por segundo y renace una vez.',
+    stats: { hp: 3.5, speed: 1.15, dmg: 2.2, dash: 0.7, reload: 0.6, ability: 0.5, size: 1.3, regen: 6, revive: 1, knock: 0 },
+  },
+  celestial: {
+    id: 'celestial', name: 'Celestial', icon: '😇', role: 'Divino', shape: 'star', accent: '#fff3a3', unlock: 70000,
+    desc: '300 de vida, +150 % de daño, +45 % de velocidad, habilidad un 75 % más rápida, se cura y renace.',
+    stats: { hp: 3, speed: 1.45, dmg: 2.5, dash: 0.4, reload: 0.5, ability: 0.25, size: 1, regen: 6, revive: 1 },
+  },
+  dios: {
+    id: 'dios', name: 'Dios del Neón', icon: '🌟', role: 'Definitivo', shape: 'crown', accent: '#ffffff', unlock: 100000,
+    desc: 'El premio final del camino: 500 de vida, daño ×3,5, el más rápido, recarga instantánea, se cura 10 por segundo y renace.',
+    stats: { hp: 5, speed: 1.5, dmg: 3.5, dash: 0.3, reload: 0.4, ability: 0.2, size: 1.15, regen: 10, revive: 1, knock: 0 },
+  },
 };
 
 const CHARACTER_IDS = Object.keys(CHARACTERS);
 const DEFAULT_CHARACTER = 'nova';
+/** Los 6 que se tienen desde el principio (los bots usan estos). */
+const BASE_CHARACTER_IDS = CHARACTER_IDS.filter((id) => !CHARACTERS[id].unlock);
 
 /** Barras de la ficha (0–1) para enseñar de un vistazo en qué destaca. */
 function characterBars(c) {
   const s = c.stats;
   return [
-    ['VIDA', Math.min(1, (s.hp * 100) / 170)],
-    ['VELOCIDAD', Math.min(1, (s.speed - 0.6) / 0.7)],
-    ['DAÑO', Math.min(1, (s.dmg - 0.7) / 0.55)],
-    ['HABILIDAD', Math.min(1, (1.4 - s.ability) / 0.8)],
+    // Escala "suave" para que los del principio y los de 100 000 trofeos se distingan
+    ['VIDA', Math.min(1, Math.log(s.hp * 100 / 50) / Math.log(10))],
+    ['VELOCIDAD', Math.min(1, (s.speed - 0.6) / 0.9)],
+    ['DAÑO', Math.min(1, Math.log(s.dmg / 0.6) / Math.log(3.5 / 0.6))],
+    ['HABILIDAD', Math.min(1, (1.4 - s.ability) / 1.2)],
   ];
 }
 
-return { CHARACTERS, CHARACTER_IDS, DEFAULT_CHARACTER, characterBars };
+return { CHARACTERS, CHARACTER_IDS, DEFAULT_CHARACTER, BASE_CHARACTER_IDS, characterBars };
 })();
 
 // ── src/ai/BotController.js ──
@@ -2093,7 +2180,7 @@ __mod["src/ai/BotController.js"] = (() => {
 // ─────────────────────────────────────────────────────────────
 const { ABILITY_IDS } = __mod["src/data/abilities.js"];
 const { WEAPONS } = __mod["src/data/weapons.js"];
-const { CHARACTER_IDS } = __mod["src/data/characters.js"];
+const { BASE_CHARACTER_IDS } = __mod["src/data/characters.js"];
 const LEVELS = {
   easy: { aimError: 0.32, fireChance: 0.55, dodge: 0.12, react: 0.45, ability: 0.25 },
   normal: { aimError: 0.1, fireChance: 0.9, dodge: 0.55, react: 0.18, ability: 0.8 },
@@ -2107,7 +2194,7 @@ class BotController {
   }
 
   static randomCharacter() {
-    return CHARACTER_IDS[Math.floor(Math.random() * CHARACTER_IDS.length)];
+    return BASE_CHARACTER_IDS[Math.floor(Math.random() * BASE_CHARACTER_IDS.length)];
   }
 
   static nameFor(i) {
@@ -2332,6 +2419,120 @@ const BOT_WEAPON_IDS = Object.keys(WEAPONS);
 return { BotController, BOT_WEAPON_IDS };
 })();
 
+// ── src/data/auras.js ──
+__mod["src/data/auras.js"] = (() => {
+// ─────────────────────────────────────────────────────────────
+//  AURAS (solo estética): un brillo animado alrededor de tu personaje.
+//  Se desbloquean en el CAMINO DE TROFEOS y se equipan tocándolas allí.
+//  colors: uno o varios colores (si hay varios, va cambiando) · spin: velocidad del giro
+// ─────────────────────────────────────────────────────────────
+const AURAS = {
+  chispa: { id: 'chispa', name: 'Aura Chispa', at: 50, colors: ['#ffd23d'], spin: 1.5 },
+  hielo: { id: 'hielo', name: 'Aura de Hielo', at: 200, colors: ['#9be7ff'], spin: 1 },
+  fuego: { id: 'fuego', name: 'Aura de Fuego', at: 450, colors: ['#ff6b3d', '#ffd23d'], spin: 2.2 },
+  toxica: { id: 'toxica', name: 'Aura Tóxica', at: 800, colors: ['#9dff00'], spin: 1.6 },
+  rosa: { id: 'rosa', name: 'Aura Rosa Neón', at: 1250, colors: ['#ff4df0'], spin: 1.8 },
+  plata: { id: 'plata', name: 'Aura de Plata', at: 2000, colors: ['#e8ecff', '#9aa3c7'], spin: 1.2 },
+  oro: { id: 'oro', name: 'Aura de Oro', at: 3200, colors: ['#ffd23d', '#fff6c2'], spin: 1.4 },
+  sombra: { id: 'sombra', name: 'Aura Sombría', at: 5000, colors: ['#7a5cff', '#1b1240'], spin: 2 },
+  plasma: { id: 'plasma', name: 'Aura de Plasma', at: 7500, colors: ['#c79bff', '#3dd1ff'], spin: 2.6 },
+  rayos: { id: 'rayos', name: 'Aura Eléctrica', at: 11000, colors: ['#00ffd0', '#ffffff'], spin: 3.4 },
+  lava: { id: 'lava', name: 'Aura de Lava', at: 15000, colors: ['#ff3d00', '#ffb02e', '#ff6b3d'], spin: 2.4 },
+  diamante: { id: 'diamante', name: 'Aura de Diamante', at: 21000, colors: ['#bff7ff', '#7df9ff', '#ffffff'], spin: 2 },
+  galaxia: { id: 'galaxia', name: 'Aura Galaxia', at: 30000, colors: ['#a78bff', '#ff4df0', '#3dd1ff'], spin: 2.2 },
+  cosmica: { id: 'cosmica', name: 'Aura Cósmica', at: 42000, colors: ['#ffffff', '#7a5cff', '#00e5ff', '#ff4df0'], spin: 3 },
+  arcoiris: { id: 'arcoiris', name: 'Aura Arcoíris', at: 60000, colors: ['#ff4d6d', '#ffb02e', '#ffd23d', '#3dff9a', '#3dd1ff', '#c79bff'], spin: 3.2 },
+  leyenda: { id: 'leyenda', name: 'Aura de Leyenda', at: 85000, colors: ['#ffd23d', '#ffffff', '#ff4df0', '#00e5ff'], spin: 4.5 },
+};
+const AURA_IDS = Object.keys(AURAS);
+
+return { AURAS, AURA_IDS };
+})();
+
+// ── src/core/Progress.js ──
+__mod["src/core/Progress.js"] = (() => {
+// ─────────────────────────────────────────────────────────────
+//  PROGRESO: trofeos, premios del camino y aura equipada (se guarda en el dispositivo)
+//  - Los trofeos suben (y en JcJ también pueden bajar) al terminar cada partida.
+//  - Los premios del CAMINO DE TROFEOS (personajes y auras) se desbloquean al llegar
+//    a su cifra y ya no se pierden aunque luego bajen los trofeos.
+// ─────────────────────────────────────────────────────────────
+const { CHARACTERS, CHARACTER_IDS } = __mod["src/data/characters.js"];
+const { AURAS, AURA_IDS } = __mod["src/data/auras.js"];
+const KEY = 'neonArena.progress.v1';
+
+function load() {
+  try {
+    const d = JSON.parse(localStorage.getItem(KEY) || '{}');
+    return {
+      trophies: Math.max(0, d.trophies | 0), max: Math.max(0, d.max | 0),
+      unlocked: Array.isArray(d.unlocked) ? d.unlocked : [], aura: AURAS[d.aura] ? d.aura : null,
+    };
+  } catch {
+    return { trophies: 0, max: 0, unlocked: [], aura: null };
+  }
+}
+
+const PROGRESS = load();
+
+function save() {
+  try { localStorage.setItem(KEY, JSON.stringify(PROGRESS)); } catch { /* sin almacenamiento */ }
+}
+
+/** Todos los premios del camino, de menos a más trofeos: { at, kind: 'character' | 'aura', id, def } */
+const ROAD = [
+  ...CHARACTER_IDS.filter((id) => CHARACTERS[id].unlock).map((id) => ({ at: CHARACTERS[id].unlock, kind: 'character', id, def: CHARACTERS[id] })),
+  ...AURA_IDS.map((id) => ({ at: AURAS[id].at, kind: 'aura', id, def: AURAS[id] })),
+].sort((a, b) => a.at - b.at);
+const ROAD_MAX = Math.max(...ROAD.map((r) => r.at));
+
+const keyOf = (r) => (r.kind === 'aura' ? `aura:${r.id}` : r.id);
+
+function itemUnlocked(r) {
+  return PROGRESS.max >= r.at || PROGRESS.unlocked.includes(keyOf(r));
+}
+
+function isUnlocked(id) {
+  const c = CHARACTERS[id];
+  return !!c && (!c.unlock || PROGRESS.unlocked.includes(id) || PROGRESS.max >= c.unlock);
+}
+
+function isAuraUnlocked(id) {
+  const a = AURAS[id];
+  return !!a && (PROGRESS.max >= a.at || PROGRESS.unlocked.includes(`aura:${id}`));
+}
+
+/** Equipa (o quita, con null) un aura. */
+function setAura(id) {
+  PROGRESS.aura = id && isAuraUnlocked(id) ? id : null;
+  save();
+}
+
+/** Suma (o resta) trofeos. Devuelve los premios nuevos desbloqueados. */
+function addTrophies(delta) {
+  PROGRESS.trophies = Math.max(0, PROGRESS.trophies + delta);
+  PROGRESS.max = Math.max(PROGRESS.max, PROGRESS.trophies);
+  const fresh = [];
+  for (const r of ROAD) {
+    const k = keyOf(r);
+    if (!PROGRESS.unlocked.includes(k) && PROGRESS.max >= r.at) {
+      PROGRESS.unlocked.push(k);
+      fresh.push(r);
+      if (r.kind === 'aura') PROGRESS.aura = r.id;   // la nueva aura se pone sola
+    }
+  }
+  save();
+  return fresh;
+}
+
+/** Siguiente premio del camino (o null si ya está todo). */
+function nextReward() {
+  return ROAD.find((r) => !itemUnlocked(r)) ?? null;
+}
+
+return { PROGRESS, ROAD, ROAD_MAX, itemUnlocked, isUnlocked, isAuraUnlocked, setAura, addTrophies, nextReward };
+})();
+
 // ── src/data/enemies.js ──
 __mod["src/data/enemies.js"] = (() => {
 // ─────────────────────────────────────────────────────────────
@@ -2447,6 +2648,11 @@ function pathShape(ctx, shape, x, y, r, rot = 0) {
   };
   switch (shape) {
     case 'octagon': poly(8, 1, Math.PI / 8); break;
+    case 'triangle': poly(3, 1, 0); break;
+    case 'square': poly(4, 1, Math.PI / 4); break;
+    case 'pentagon': poly(5, 1, 0); break;
+    case 'bolt': poly(6, 0.5, 0); break;
+    case 'crown': poly(10, 0.72, 0); break;
     case 'hexagon': poly(6, 1, 0); break;
     case 'diamond': poly(4, 0.72, 0); break;
     case 'star': poly(10, 0.62, -Math.PI / 2); break;
@@ -2486,7 +2692,7 @@ function drawAvatar(ctx, x, y, r, color, angle = 0, {
 
   // Cuerpo con la forma del personaje (gira con la mirada, salvo el círculo)
   const rot = shape === 'circle' ? 0 : angle;
-  const body = shape === 'star' ? r * 1.15 : shape === 'diamond' ? r * 1.15 : r;
+  const body = shape === 'star' || shape === 'diamond' || shape === 'triangle' || shape === 'bolt' ? r * 1.15 : r;
   ctx.fillStyle = color;
   pathShape(ctx, shape, x, y, body, rot);
   ctx.fill();
@@ -2507,7 +2713,41 @@ function drawAvatar(ctx, x, y, r, color, angle = 0, {
   ctx.fill();
 }
 
-return { pathShape, drawAvatar };
+/** Aura (estética): anillos de brillo girando alrededor del personaje. */
+function drawAura(ctx, x, y, r, aura, t) {
+  if (!aura) return;
+  const cols = aura.colors;
+  const n = cols.length;
+  ctx.save();
+  ctx.translate(x, y);
+  ctx.globalCompositeOperation = 'lighter';
+  for (let k = 0; k < 3; k++) {
+    const c = cols[(k + Math.floor(t * 2)) % n];
+    const rr = r * (1.45 + k * 0.28 + 0.06 * Math.sin(t * 4 + k));
+    ctx.rotate(t * aura.spin * (k % 2 ? -1 : 1) * 0.5);
+    ctx.strokeStyle = c;
+    ctx.globalAlpha = 0.55 - k * 0.13;
+    ctx.lineWidth = Math.max(1.5, r * 0.12);
+    ctx.shadowColor = c;
+    ctx.shadowBlur = r * 0.8;
+    ctx.beginPath();
+    ctx.arc(0, 0, rr, 0, Math.PI * 1.25);
+    ctx.stroke();
+  }
+  // Chispitas
+  for (let k = 0; k < 5; k++) {
+    const a = t * aura.spin + (k / 5) * Math.PI * 2;
+    const rr = r * (1.7 + 0.2 * Math.sin(t * 3 + k));
+    ctx.fillStyle = cols[k % n];
+    ctx.globalAlpha = 0.8;
+    ctx.beginPath();
+    ctx.arc(Math.cos(a) * rr, Math.sin(a) * rr, Math.max(1, r * 0.1), 0, Math.PI * 2);
+    ctx.fill();
+  }
+  ctx.restore();
+}
+
+return { pathShape, drawAvatar, drawAura };
 })();
 
 // ── src/systems/AimAssist.js ──
@@ -2589,13 +2829,14 @@ const { PVP } = __mod["src/data/modes.js"];
 const { CHARACTERS, DEFAULT_CHARACTER } = __mod["src/data/characters.js"];
 const { normalize, rand } = __mod["src/core/math.js"];
 const { withAlpha, drawText } = __mod["src/render/draw.js"];
-const { drawAvatar } = __mod["src/render/avatar.js"];
+const { drawAvatar, drawAura } = __mod["src/render/avatar.js"];
+const { AURAS } = __mod["src/data/auras.js"];
 const { ABILITIES, DEFAULT_ABILITY } = __mod["src/data/abilities.js"];
 const { applyAimHelp } = __mod["src/systems/AimAssist.js"];
 const { quality } = __mod["src/core/Settings.js"];
 const { WEAPONS, DEFAULT_WEAPON, fireWeapon } = __mod["src/data/weapons.js"];
 class Player {
-  constructor({ id, x, y, color, controller, ability = DEFAULT_ABILITY, character = DEFAULT_CHARACTER }) {
+  constructor({ id, x, y, color, controller, ability = DEFAULT_ABILITY, character = DEFAULT_CHARACTER, aura = null }) {
     this.id = id;
     this.isPlayer = true;
     this.team = 0;
@@ -2614,6 +2855,7 @@ class Player {
     this.stats = { ...CONFIG.player };   // copia propia → las mejoras la modificarán
     // Personaje: cambia aspecto y estadísticas
     this.character = CHARACTERS[character] ? character : DEFAULT_CHARACTER;
+    this.aura = AURAS[aura] ? aura : null;
     const ch = (this.charDef = CHARACTERS[this.character]);
     const cs = ch.stats;
     this.stats.speed *= cs.speed;
@@ -2665,6 +2907,20 @@ class Player {
     this.abilityCd = Math.min(this.abilityCd, 6);
   }
 
+  /** Fénix / Omega X: renacen una vez por partida (en JcJ, una vez por vida). */
+  tryRevive(game) {
+    if (!this.charDef.stats.revive || this.revived) return false;
+    this.revived = true;
+    this.hp = Math.round(this.maxHp * 0.5);
+    this.invuln = 2;
+    game.effects.ring(this.x, this.y, '#ff6b3d', 150, 0.6);
+    game.effects.burst(this.x, this.y, { color: '#ffd23d', count: 50, speed: 360, life: 0.8, size: 4 });
+    game.hud.showToast(`🔥 ¡${this.name} ha renacido!`);
+    game.emit?.(['T', `🔥 ¡${this.name} ha renacido!`]);
+    game.playSound('ability', this.x, this.y);
+    return true;
+  }
+
   /** Daño de lava / ácido: continuo, sin parpadeo de invulnerabilidad. */
   burn(amount, game) {
     if (!this.alive || this.shield > 0 || this.invuln > 0.5) return;
@@ -2675,6 +2931,7 @@ class Player {
       game.effects.burst(this.x, this.y, { color: game.map.theme.hazard, count: 5, speed: 120, life: 0.35, size: 3 });
     }
     if (this.hp <= 0) {
+      if (this.tryRevive(game)) return;
       this.hp = 0;
       this.alive = false;
       game.onPlayerDied(this, null);
@@ -2864,6 +3121,7 @@ class Player {
     game.effects.burst(this.x, this.y, { color: CONFIG.colors.danger, count: 14, speed: 240, life: 0.4 });
     game.onPlayerHurt(this, amount);
     if (this.hp <= 0) {
+      if (this.tryRevive(game)) return true;
       this.hp = 0;
       this.alive = false;
       game.onPlayerDied(this, attacker);
@@ -2899,6 +3157,7 @@ class Player {
     const w = this.weapon;
     const gl = { pistol: 1.0, smg: 1.0, shotgun: 1.2, machinegun: 1.4, sniper: 1.8, rocket: 1.5, laser: 1.5, electric: 1.2, flamethrower: 1.3, plasma: 1.4, burst: 1.4, legendary: 1.6 }[this.weaponState.id] ?? 1.1;
     const gw = { shotgun: 0.6, rocket: 0.75, plasma: 0.7, machinegun: 0.6, flamethrower: 0.65 }[this.weaponState.id] ?? 0.45;
+    if (this.aura) drawAura(ctx, this.x, this.y, r, AURAS[this.aura], game.clock);
     drawAvatar(ctx, this.x, this.y, r, this.color, Math.atan2(this.aimY, this.aimX), { recoil: this.recoil, halo: quality().halos, gunColor: w.color, gunLen: gl, gunWidth: gw, shape: this.charDef.shape, accent: this.charDef.accent });
     // Recargando: anillo de progreso
     if (this.reloadT > 0) {
@@ -5050,6 +5309,7 @@ return { handleCollisions };
 __mod["src/ui/HUD.js"] = (() => {
 // Interfaz dibujada sobre el juego: vida, oleada, puntos, avisos y pantallas (menú, pausa, fin).
 const { CONFIG } = __mod["src/config.js"];
+const { CHARACTERS } = __mod["src/data/characters.js"];
 const { clamp } = __mod["src/core/math.js"];
 const { drawText, pathRoundRect, pathCircle } = __mod["src/render/draw.js"];
 const { ABILITIES } = __mod["src/data/abilities.js"];
@@ -5138,7 +5398,7 @@ class HUD {
       this.drawToast(ctx, w, h, s, game.lobby.L.hintY - 20 * s);   // encima de los botones
       return;
     }
-    if (game.state === 'menu' || game.state === 'settings' || game.state === 'tutorial' || game.state === 'modes') {
+    if (game.state === 'menu' || game.state === 'settings' || game.state === 'tutorial' || game.state === 'modes' || game.state === 'road') {
       game.menus.draw(ctx, w, h, s);
       this.drawToast(ctx, w, h, s);
       return;
@@ -5418,6 +5678,27 @@ class HUD {
     }
   }
 
+  /** "+12 🏆" y, si toca, el personaje desbloqueado. Devuelve la nueva altura. */
+  drawTrophyGain(ctx, game, w, y, s) {
+    const g = game.trophyGain;
+    if (!g || game.stateTime < 0.6) return y;
+    const d = g.delta;
+    const txt = d > 0 ? `+${d} 🏆` : d < 0 ? `${d} 🏆` : '±0 🏆';
+    const col = d > 0 ? '#ffd23d' : d < 0 ? '#ff6b8a' : '#c7d2ff';
+    drawText(ctx, `${txt}   ·   Total: ${g.total} 🏆`, w / 2, y, { size: 22 * s, align: 'center', baseline: 'middle', weight: '900', color: col, glow: col });
+    y += 36 * s;
+    const pulse = 1 + 0.05 * Math.sin(game.stateTime * 6);
+    for (const r of g.unlocks.slice(0, 3)) {
+      const c = r.def;
+      const label = r.kind === 'aura' ? `✨ ¡NUEVA ${c.name.toUpperCase()}!` : `🔓 ¡NUEVO PERSONAJE: ${c.icon} ${c.name.toUpperCase()}!`;
+      const col = r.kind === 'aura' ? c.colors[0] : c.accent;
+      drawText(ctx, label, w / 2, y, { size: 21 * s * pulse, align: 'center', baseline: 'middle', weight: '900', color: col, glow: col });
+      y += 32 * s;
+    }
+    if (g.unlocks.length > 3) { drawText(ctx, `…y ${g.unlocks.length - 3} premios más en el Camino de trofeos`, w / 2, y, { size: 15 * s, align: 'center', baseline: 'middle', weight: '700' }); y += 28 * s; }
+    return y;
+  }
+
   drawGameOver(ctx, game, w, h, s) {
     this.overlay(ctx, w, h, Math.min(0.7, game.stateTime * 1.5));
     if (game.stateTime < 0.3) return;
@@ -5434,6 +5715,7 @@ class HUD {
         drawText(ctx, `${p.name}${p.isBot ? ' 🤖' : ''}   ⚔️ ${p.pvpKills || 0}   💀 ${p.deaths || 0}`, w / 2, y, { size: 17 * s, align: 'center', baseline: 'middle', weight: '700', color: p.color });
         y += 28 * s;
       }
+      y = this.drawTrophyGain(ctx, game, w, y + 10 * s, s);
       if (game.stateTime > 1) this.prompt(ctx, game, game.net.isClient ? 'Esperando al anfitrión…' : textsFor(game).retry, w / 2, y + 30 * s, s);
       return;
     }
@@ -5450,6 +5732,7 @@ class HUD {
       drawText(ctx, '¡NUEVO RÉCORD!', w / 2, y, { size: 22 * s, align: 'center', baseline: 'middle', color: '#ffd23d', glow: '#ffd23d' });
       y += 40 * s;
     }
+    y = this.drawTrophyGain(ctx, game, w, y, s);
     if (game.stateTime > 1) {
       this.prompt(ctx, game, game.net.isClient ? 'Esperando al anfitrión…' : textsFor(game).retry, w / 2, y + 20 * s, s);
     }
@@ -5475,7 +5758,7 @@ const { CONFIG } = __mod["src/config.js"];
 const { BTN } = __mod["src/core/Input.js"];
 const { clamp } = __mod["src/core/math.js"];
 const { drawText, drawWrapped, pathRoundRect, pathCircle, withAlpha, inRect, FONT } = __mod["src/render/draw.js"];
-const { drawAvatar } = __mod["src/render/avatar.js"];
+const { drawAvatar, drawAura } = __mod["src/render/avatar.js"];
 const { ABILITIES, ABILITY_IDS, DEFAULT_ABILITY } = __mod["src/data/abilities.js"];
 const { SETTINGS, setSetting, cleanName } = __mod["src/core/Settings.js"];
 const { Sound } = __mod["src/audio/Sound.js"];
@@ -5483,9 +5766,11 @@ const { MODES, MODE_IDS, DEFAULT_MODE, TEAM_COLORS, TEAM_NAMES } = __mod["src/da
 const { MAPS, MAP_IDS, DEFAULT_MAP } = __mod["src/data/maps.js"];
 const { BotController } = __mod["src/ai/BotController.js"];
 const { CHARACTERS, CHARACTER_IDS, DEFAULT_CHARACTER, characterBars } = __mod["src/data/characters.js"];
+const { PROGRESS, isUnlocked } = __mod["src/core/Progress.js"];
+const { AURAS } = __mod["src/data/auras.js"];
 const CHAR_KEY = 'neonArena.character';
 function savedCharacter() {
-  try { const id = localStorage.getItem(CHAR_KEY); return CHARACTERS[id] ? id : DEFAULT_CHARACTER; } catch { return DEFAULT_CHARACTER; }
+  try { const id = localStorage.getItem(CHAR_KEY); return CHARACTERS[id] && isUnlocked(id) ? id : DEFAULT_CHARACTER; } catch { return DEFAULT_CHARACTER; }
 }
 function saveCharacter(id) {
   try { localStorage.setItem(CHAR_KEY, id); } catch { /* sin almacenamiento */ }
@@ -5603,10 +5888,11 @@ class Lobby {
 
   open(hostDevice) {
     if (!this.slots.length || (hostDevice && this.slots[0].device !== hostDevice && !this.game.net.isHost)) {
-      this.slots = [{ device: hostDevice || 'kbm', host: true, joinedAt: this.t, ability: savedAbility(), character: savedCharacter(), ready: true }];
+      this.slots = [{ device: hostDevice || 'kbm', host: true, joinedAt: this.t, ability: savedAbility(), character: savedCharacter(), aura: PROGRESS.aura, ready: true }];
     }
     this.panel = false;
     this.abilityPanel = false;
+    if (this.slots[0]) this.slots[0].aura = PROGRESS.aura;
     // Tras una partida online, los amigos vuelven a confirmar que están preparados
     for (const sl of this.slots) if (sl.device.startsWith('net:')) sl.ready = false;
   }
@@ -5634,6 +5920,7 @@ class Lobby {
         device: s.device, host: i === 0, joinedAt: prev.get(`${i}:${cleanName(s.name, `Jugador ${i + 1}`)}`) ?? this.t,
         ability: ABILITIES[s.ability] ? s.ability : DEFAULT_ABILITY,
         character: CHARACTERS[s.character] ? s.character : DEFAULT_CHARACTER,
+        aura: AURAS[s.aura] ? s.aura : null,
         name: cleanName(s.name, `Jugador ${i + 1}`), ready: !!s.ready, ping: s.ping, lost: !!s.lost,
       })),
     };
@@ -5646,6 +5933,8 @@ class Lobby {
       const ch = savedCharacter();
       this.remote.slots[msg.you].character = ch;
       this.game.net.sendCharacter(ch);
+      this.remote.slots[msg.you].aura = PROGRESS.aura;
+      this.game.net.sendAura(PROGRESS.aura);
     }
   }
 
@@ -5698,7 +5987,7 @@ class Lobby {
     this.panel = false;
     this.abilityPanel = false;
     Sound.play('ui');
-    this.game.startRun(this.slots.map((s, i) => ({ device: s.device, ability: s.ability, character: s.character, name: this.nameOf(s, i) })));
+    this.game.startRun(this.slots.map((s, i) => ({ device: s.device, ability: s.ability, character: s.character, aura: s.aura, name: this.nameOf(s, i) })));
   }
 
   /** Invitado online: marcar / desmarcar PREPARADO. */
@@ -5758,8 +6047,9 @@ class Lobby {
 
   /** Mando de un invitado local: Y cambia al siguiente personaje. */
   cycleCharacter(slot) {
-    const i = CHARACTER_IDS.indexOf(slot.character);
-    const id = CHARACTER_IDS[(i + 1) % CHARACTER_IDS.length];
+    const list = CHARACTER_IDS.filter(isUnlocked);
+    const i = list.indexOf(slot.character);
+    const id = list[(i + 1) % list.length];
     slot.character = id;
     const c = CHARACTERS[id];
     this.game.hud.showToast(`Jugador ${this.slots.indexOf(slot) + 1}: ${c.icon} ${c.name} (${c.role})`);
@@ -5787,7 +6077,15 @@ class Lobby {
   /** Lo que muestra el panel según la pestaña. */
   pickCfg() {
     if (this.pickKind === 'character') {
-      return { ids: CHARACTER_IDS, defs: CHARACTERS, field: 'character', def: DEFAULT_CHARACTER, equip: (id) => this.equipCharacter(id) };
+      return {
+        ids: CHARACTER_IDS, defs: CHARACTERS, field: 'character', def: DEFAULT_CHARACTER,
+        equip: (id) => {
+          if (isUnlocked(id)) { this.peek = null; return this.equipCharacter(id); }
+          this.peek = id;   // bloqueado: se ve su ficha, pero no se equipa
+          this.equipT = this.t;
+          Sound.play('warning');
+        },
+      };
     }
     return { ids: ABILITY_IDS, defs: ABILITIES, field: 'ability', def: DEFAULT_ABILITY, equip: (id) => this.equip(id) };
   }
@@ -5885,6 +6183,7 @@ class Lobby {
       || (!this.slots[0].device.startsWith('gp') && !this.remote && this.slots.length === 1 && anyPad(BTN.X));
     if (openAbilities && !this.panel) {
       this.abilityPanel = true;
+      this.peek = null;
       return;
     }
 
@@ -5989,7 +6288,7 @@ class Lobby {
     const P = this.AP;
     const C = this.pickCfg();
     const cols = P ? P.cols : 3;
-    const cur = Math.max(0, C.ids.indexOf(this.mySlot?.[C.field]));
+    const cur = Math.max(0, C.ids.indexOf(this.pickKind === 'character' && this.peek ? this.peek : this.mySlot?.[C.field]));
     const n = C.ids.length;
     let move = 0;
     // Cambiar de pestaña: TAB / Q / E, LB / RB, o tocando la pestaña
@@ -6124,7 +6423,7 @@ class Lobby {
     drawText(ctx, `SALA DE AMIGOS  ${slots.length}/${MAX_PARTY}${online ? `  ·  🟢 ${online - lostN} online` : ''}`, w / 2, titleY, {
       size: 17 * s, weight: '900', align: 'center', stroke: '#0b0e3a', strokeWidth: 5 * s,
     });
-    this.drawPill(ctx, `🏆 ${this.game.best}`, w - 18 * s, 18 * s, s);
+    this.drawPill(ctx, `🏆 ${PROGRESS.trophies}`, w - 18 * s, 18 * s, s);
     const code = this.remote?.code ?? (net.isHost ? net.code : null);
     if (code) {
       drawText(ctx, `🌐 ONLINE · CÓDIGO ${code}`, w / 2, titleY + 28 * s, {
@@ -6298,6 +6597,7 @@ class Lobby {
     const bob = Math.sin(this.t * 3 + i) * 4 * s;
     const ar = pr * 0.72 * k;
     const chd = CHARACTERS[slot.character] ?? CHARACTERS[DEFAULT_CHARACTER];
+    if (ar > 0.5 && AURAS[slot.aura]) drawAura(ctx, cx, py - pr * 0.95 + bob, ar, AURAS[slot.aura], this.t);
     if (ar > 0.5) drawAvatar(ctx, cx, py - pr * 0.95 + bob, ar, color, Math.sin(this.t * 1.5 + i) * 0.8 - 0.3, { shape: chd.shape, accent: chd.accent });
 
     drawText(ctx, deviceLabel(slot.device, isYou), cx, r.y + r.h - 18 * s, { size: 12 * s, weight: '700', align: 'center', baseline: 'middle', alpha: 0.85 });
@@ -6410,10 +6710,10 @@ class Lobby {
     const C = this.pickCfg();
     const isChar = this.pickKind === 'character';
     const portrait = h > w * 1.1;
-    const cols = portrait ? 2 : 3;
+    const cols = isChar ? (portrait ? 3 : 6) : portrait ? 2 : 3;
     const rows = Math.ceil(C.ids.length / cols);
-    const pw = Math.min(w - 20 * s, 680 * s);
-    const ph = Math.min(h - 20 * s, (portrait ? 700 : 520) * s);
+    const pw = Math.min(w - 20 * s, (isChar && !portrait ? 820 : 680) * s);
+    const ph = Math.min(h - 20 * s, (portrait ? 760 : 560) * s);
     const x = (w - pw) / 2;
     const y = (h - ph) / 2;
     ctx.fillStyle = '#1a1466';
@@ -6436,7 +6736,8 @@ class Lobby {
       drawText(ctx, label, r.x + r.w / 2, r.y + r.h / 2 + 1, { size: 15 * s, weight: '900', align: 'center', baseline: 'middle', color: on ? '#0b0e3a' : '#ffffff' });
     });
     const slot = this.mySlot;
-    const current = slot?.[C.field] ?? C.def;
+    const equipped = slot?.[C.field] ?? C.def;
+    const current = isChar && this.peek ? this.peek : equipped;
     const playerN = this.remote ? this.remote.you + 1 : 1;
     const pad0 = this.game.input.gamepads.connected().length;
     drawText(ctx, `Jugador ${playerN} · ${isChar ? 'pulsa uno para elegirlo' : 'pulsa una para equiparla'}${pad0 ? ' · LB/RB: cambiar pestaña' : this.game.input.usingTouch ? '' : ' · TAB: cambiar pestaña'}`, w / 2, y + 56 * s, { size: 12 * s, weight: '600', align: 'center', alpha: 0.7 });
@@ -6460,6 +6761,7 @@ class Lobby {
       const r = { x: tx, y: ty, w: tw, h: th };
       tiles.push(r);
       const sel = id === current;
+      const locked = isChar && !isUnlocked(id);
       const pop = sel ? 1 + 0.08 * Math.max(0, 1 - (this.t - this.equipT) / 0.25) : 1;
       ctx.save();
       ctx.translate(tx + tw / 2, ty + th / 2);
@@ -6473,12 +6775,16 @@ class Lobby {
       ctx.restore();
       if (isChar) {
         const ar = Math.min(th * 0.2, 24 * s);
-        drawAvatar(ctx, tx + tw / 2, ty + th * 0.4, ar, myColor, sel ? this.t * 1.5 : -0.4, { shape: def.shape, accent: def.accent, halo: sel });
+        ctx.save();
+        if (locked) ctx.globalAlpha = 0.35;
+        drawAvatar(ctx, tx + tw / 2, ty + th * 0.4, ar, locked ? '#5b6390' : myColor, sel && !locked ? this.t * 1.5 : -0.4, { shape: def.shape, accent: def.accent, halo: sel && !locked });
+        ctx.restore();
+        if (locked) drawText(ctx, `🔒 ${def.unlock >= 1000 ? `${def.unlock / 1000}k` : def.unlock}`, tx + tw / 2, ty + th * 0.44, { size: Math.min(13 * s, tw / 6), weight: '900', align: 'center', baseline: 'middle', color: '#ffd23d' });
       } else {
         drawText(ctx, def.icon, tx + tw / 2, ty + th * 0.4, { size: Math.min(th * 0.42, 40 * s), align: 'center', baseline: 'middle' });
       }
       drawText(ctx, def.name, tx + tw / 2, ty + th * 0.78, { size: 14 * s, weight: '900', align: 'center', baseline: 'middle' });
-      if (sel) drawText(ctx, isChar ? '✓ ELEGIDO' : '✓ EQUIPADA', tx + 8 * s, ty + 8 * s, { size: 10 * s, weight: '900', color: '#ffd23d' });
+      if (sel && !locked) drawText(ctx, isChar ? '✓ ELEGIDO' : '✓ EQUIPADA', tx + 8 * s, ty + 8 * s, { size: 10 * s, weight: '900', color: '#ffd23d' });
       else if (isChar) drawText(ctx, def.role.toUpperCase(), tx + 8 * s, ty + 8 * s, { size: 9 * s, weight: '900', color: def.accent, alpha: 0.9 });
     });
 
@@ -6491,7 +6797,8 @@ class Lobby {
     ctx.fill();
     if (isChar) {
       drawText(ctx, `${def.icon} ${def.name}`, x + pad + 12 * s, dy + 10 * s, { size: 16 * s, weight: '900', color: def.accent });
-      drawText(ctx, def.role.toUpperCase(), x + pw - pad - 12 * s, dy + 12 * s, { size: 12 * s, weight: '900', align: 'right', color: def.accent });
+      const lockedDesc = !isUnlocked(current);
+      drawText(ctx, lockedDesc ? `🔒 ${def.unlock} 🏆 · tienes ${PROGRESS.trophies}` : def.role.toUpperCase(), x + pw - pad - 12 * s, dy + 12 * s, { size: 12 * s, weight: '900', align: 'right', color: lockedDesc ? '#ffd23d' : def.accent });
       drawWrapped(ctx, def.desc, x + pad + 12 * s, dy + 34 * s, dw - 24 * s, { size: 12.5 * s, weight: '500', lineHeight: 16 * s });
       const bars = characterBars(def);
       const bw = (dw - 24 * s - 3 * 10 * s) / 4;
@@ -7244,6 +7551,7 @@ const { emptyInput } = __mod["src/core/Input.js"];
 const { MAX_PARTY } = __mod["src/ui/Lobby.js"];
 const { ABILITIES, DEFAULT_ABILITY } = __mod["src/data/abilities.js"];
 const { CHARACTERS } = __mod["src/data/characters.js"];
+const { AURAS } = __mod["src/data/auras.js"];
 const { SETTINGS, cleanName } = __mod["src/core/Settings.js"];
 const PROTOCOL = 4;
 const CODE_CHARS = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789';   // sin O/0 ni I/1 para no confundir
@@ -7564,6 +7872,9 @@ class NetSession {
       case 'character':
         if (slot && CHARACTERS[msg.id]) { slot.character = msg.id; this.broadcastLobby(); }
         break;
+      case 'aura':
+        if (slot) { slot.aura = AURAS[msg.id] ? msg.id : null; this.broadcastLobby(); }
+        break;
       case 'name':
         peer.name = cleanName(msg.name, peer.name);
         if (slot) { slot.name = peer.name; this.broadcastLobby(); }
@@ -7615,6 +7926,7 @@ class NetSession {
         name: lobby.nameOf(s, i),
         ability: s.ability,
         character: s.character,
+        aura: s.aura || null,
         ready: !!s.ready,
         ping: peer ? peer.ping : null,
         lost: !!peer?.lostAt,
@@ -7632,7 +7944,7 @@ class NetSession {
   }
 
   startMsg(token, resume = false) {
-    const players = this.game.players.map((p) => ({ id: p.id, color: p.color, name: p.name, ability: p.ability, character: p.character, team: p.team, bot: p.isBot ? 1 : 0 }));
+    const players = this.game.players.map((p) => ({ id: p.id, color: p.color, name: p.name, ability: p.ability, character: p.character, aura: p.aura, team: p.team, bot: p.isBot ? 1 : 0 }));
     const me = this.game.players.find((p) => p.controller.binding === `net:${token}`);
     const g = this.game;
     return { t: 'start', players, you: me ? me.id : null, resume, mode: g.mode.id, map: g.mapId };
@@ -7805,6 +8117,7 @@ class NetSession {
   sendPause() { this.hostConn?.send({ t: 'pause' }); }
   sendAbility(id) { this.hostConn?.send({ t: 'ability', id }); }
   sendCharacter(id) { this.hostConn?.send({ t: 'character', id }); }
+  sendAura(id) { this.hostConn?.send({ t: 'aura', id }); }
   sendReady(v) { this.hostConn?.send({ t: 'ready', v: !!v }); }
   sendName(name) { this.hostConn?.send({ t: 'name', name }); }
 
@@ -7844,11 +8157,12 @@ const { ABILITIES, ABILITY_IDS } = __mod["src/data/abilities.js"];
 const { ENEMY_TYPES } = __mod["src/data/enemies.js"];
 const { WEAPONS, WEAPON_IDS } = __mod["src/data/weapons.js"];
 const { drawText, drawWrapped, pathRoundRect, pathCircle, pathPolygon, inRect, withAlpha } = __mod["src/render/draw.js"];
-const { drawAvatar } = __mod["src/render/avatar.js"];
+const { drawAvatar, drawAura } = __mod["src/render/avatar.js"];
 const { Sound } = __mod["src/audio/Sound.js"];
 const { CONFIG } = __mod["src/config.js"];
 const { MODES, MODE_IDS } = __mod["src/data/modes.js"];
-const { CHARACTERS } = __mod["src/data/characters.js"];
+const { CHARACTERS, BASE_CHARACTER_IDS } = __mod["src/data/characters.js"];
+const { PROGRESS, ROAD, itemUnlocked, setAura, nextReward } = __mod["src/core/Progress.js"];
 const pct = (v) => `${Math.round(v * 100)} %`;
 
 const SETTING_ROWS = [
@@ -7919,6 +8233,23 @@ const TUTORIAL = [
 
 class Menus {
   constructor(game) {
+    this.wheelAcc = 0;
+    this.dragAcc = 0;
+    this.dragMoved = 0;
+    if (typeof window !== 'undefined') {
+      window.addEventListener('wheel', (e) => { if (game.state === 'road') this.wheelAcc += e.deltaY; }, { passive: true });
+      // Arrastrar con el dedo (o el ratón) para moverse por el camino
+      let lastY = null;
+      window.addEventListener('pointerdown', (e) => { if (game.state === 'road') { lastY = e.clientY; this.dragMoved = 0; this.pointerDown = true; } });
+      window.addEventListener('pointermove', (e) => {
+        if (lastY === null || game.state !== 'road') return;
+        const dy = e.clientY - lastY;
+        lastY = e.clientY;
+        this.dragAcc += dy;
+        this.dragMoved += Math.abs(dy);
+      });
+      window.addEventListener('pointerup', () => { lastY = null; this.pointerDown = false; });
+    }
     this.game = game;
     this.t = 0;
     this.sel = 0;
@@ -7981,7 +8312,184 @@ class Menus {
     else if (st === 'settings') this.updateSettings(nav);
     else if (st === 'tutorial') this.updateTutorial(nav);
     else if (st === 'modes') this.updateModes(nav);
+    else if (st === 'road') this.updateRoad(nav);
   }
+
+  // ─── Camino de trofeos ───────────────────────────────────
+  updateRoad(nav) {
+    if (nav.back || nav.ok) { Sound.play('ui'); return this.enter('menu'); }
+    if (nav.dy) this.roadScroll = (this.roadScroll ?? 0) - nav.dy * 160;
+    if (nav.dx) this.roadScroll = (this.roadScroll ?? 0) - nav.dx * 800;   // ← → saltan mucho
+    if (this.wheelAcc) { this.roadScroll = (this.roadScroll ?? 0) - this.wheelAcc; this.wheelAcc = 0; }
+    if (this.dragAcc) { this.roadScroll = (this.roadScroll ?? 0) + this.dragAcc; this.dragAcc = 0; }
+    // Mando: stick para desplazarse suave
+    const hub = this.game.input.gamepads;
+    for (const i of hub.connected()) {
+      const [, ay] = hub.axes(i);
+      if (Math.abs(ay) > 0.3) this.roadScroll = (this.roadScroll ?? 0) - ay * 18;
+    }
+    // Un toque cuenta al soltar el dedo y solo si no se ha arrastrado
+    this.pendingTaps = [...(this.pendingTaps || []), ...nav.clicks];
+    if (this.pointerDown) return;
+    const taps = this.dragMoved > 12 ? [] : this.pendingTaps;
+    this.pendingTaps = [];
+    for (const c of taps) {
+      const B = this.roadBtns || {};
+      if (B.up && inRect(c, B.up)) { this.roadScroll += (this.roadH || 400) * 0.8; continue; }
+      if (B.down && inRect(c, B.down)) { this.roadScroll -= (this.roadH || 400) * 0.8; continue; }
+      if (B.me && inRect(c, B.me)) { this.roadScroll = null; continue; }
+      const i = (this.roadRects || []).findIndex((r) => r && inRect(c, r));
+      if (i < 0) continue;
+      const it = ROAD[i];
+      const got = itemUnlocked(it);
+      if (!got) {
+        Sound.play('warning');
+        this.game.hud.showToast(`🔒 ${it.def.name}: te faltan ${it.at - PROGRESS.trophies} 🏆`);
+        continue;
+      }
+      const lobby = this.game.lobby;
+      if (!lobby.slots.length) lobby.open(this.game.input.deviceId);
+      if (it.kind === 'aura') {
+        const on = PROGRESS.aura === it.id;
+        setAura(on ? null : it.id);
+        if (lobby.slots[0]) lobby.slots[0].aura = PROGRESS.aura;
+        Sound.play('ui');
+        this.game.hud.showToast(on ? 'Aura quitada' : `✨ ${it.def.name} puesta`);
+      } else {
+        lobby.equipCharacter(it.id, lobby.slots[0]);
+        this.game.hud.showToast(`${it.def.icon} ${it.def.name} equipado`);
+      }
+    }
+  }
+
+  drawRoad(ctx, w, h, s) {
+    this.drawBackButton(ctx, s);
+    const off = w < 600 ? 40 * s : 0;   // en móvil vertical, el título va debajo de VOLVER
+    drawText(ctx, 'CAMINO DE TROFEOS', w / 2, 34 * s + off, { size: Math.min(26 * s, w / 14), weight: '900', align: 'center', baseline: 'middle', stroke: '#0b0e3a', strokeWidth: 6 * s });
+    drawText(ctx, `🏆 ${PROGRESS.trophies.toLocaleString('es-ES')}`, w / 2, 72 * s + off, { size: 30 * s, weight: '900', align: 'center', baseline: 'middle', color: '#ffd23d', glow: '#ffd23d' });
+    const nx = nextReward();
+    drawText(ctx, nx ? `Siguiente: ${nx.kind === 'aura' ? '✨' : nx.def.icon} ${nx.def.name} a ${nx.at.toLocaleString('es-ES')} 🏆 (te faltan ${(nx.at - PROGRESS.trophies).toLocaleString('es-ES')})` : '¡Lo has desbloqueado TODO!', w / 2, 100 * s + off, { size: Math.min(13 * s, w / 34), weight: '700', align: 'center', baseline: 'middle', alpha: 0.85 });
+
+    // Lista vertical: inicio (6 personajes) + todos los premios
+    const top = 124 * s + off;
+    const bottom = h - 44 * s;
+    this.roadH = bottom - top;
+    const items = [{ base: true, at: 0 }, ...ROAD];
+    const rowH = 72 * s;
+    const total = rowH * items.length;
+    const minScroll = Math.min(0, bottom - top - total);
+    if (this.roadScroll === null || this.roadScroll === undefined) {
+      // Empieza mostrando dónde vas (el siguiente premio)
+      const k = Math.max(0, items.findIndex((it) => !it.base && !itemUnlocked(it)));
+      this.roadScroll = -(k - 1.5) * rowH;
+    }
+    this.roadScroll = Math.max(minScroll, Math.min(0, this.roadScroll));
+    const lineX = Math.max(64 * s, w / 2 - 230 * s);
+    const cardW = Math.min(w - lineX - 86 * s, 440 * s);
+    ctx.save();
+    ctx.beginPath();
+    ctx.rect(0, top - 6 * s, w, bottom - top + 12 * s);
+    ctx.clip();
+    const y0 = top + rowH / 2 + this.roadScroll;
+    const yEnd = y0 + (items.length - 1) * rowH;
+    ctx.lineCap = 'round';
+    ctx.lineWidth = 10 * s;
+    ctx.strokeStyle = 'rgba(255,255,255,0.12)';
+    ctx.beginPath(); ctx.moveTo(lineX, y0); ctx.lineTo(lineX, yEnd); ctx.stroke();
+    // Relleno hasta los trofeos actuales (por tramos)
+    let fillY = y0;
+    for (let i = 1; i < items.length; i++) {
+      const k = Math.max(0, Math.min(1, (PROGRESS.trophies - items[i - 1].at) / (items[i].at - items[i - 1].at)));
+      fillY = y0 + (i - 1) * rowH + k * rowH;
+      if (k < 1) break;
+    }
+    ctx.strokeStyle = '#ffd23d';
+    ctx.shadowColor = '#ffd23d';
+    ctx.shadowBlur = 14 * s;
+    ctx.beginPath(); ctx.moveTo(lineX, y0); ctx.lineTo(lineX, Math.min(fillY, yEnd)); ctx.stroke();
+    ctx.shadowBlur = 0;
+    // Marcador "TÚ"
+    if (fillY > top - 20 && fillY < bottom + 20) {
+      ctx.fillStyle = '#ffffff';
+      pathCircle(ctx, lineX, Math.min(fillY, yEnd), 7 * s);
+      ctx.fill();
+    }
+
+    this.roadRects = [];
+    items.forEach((it, i) => {
+      const cy = y0 + i * rowH;
+      if (cy < top - rowH || cy > bottom + rowH) return;   // fuera de la pantalla: no se dibuja
+      const got = it.base || itemUnlocked(it);
+      const isAura = it.kind === 'aura';
+      ctx.fillStyle = got ? '#ffd23d' : '#2a2f6b';
+      pathCircle(ctx, lineX, cy, (isAura ? 10 : 14) * s);
+      ctx.fill();
+      ctx.lineWidth = 3 * s;
+      ctx.strokeStyle = got ? '#fff6c2' : 'rgba(255,255,255,0.35)';
+      ctx.stroke();
+      const atTxt = it.at >= 1000 ? `${(it.at / 1000).toLocaleString('es-ES')}k` : `${it.at}`;
+      drawText(ctx, atTxt, lineX - 20 * s, cy, { size: 12 * s, weight: '900', align: 'right', baseline: 'middle', color: got ? '#ffd23d' : '#9aa3c7' });
+      const r = { x: lineX + 26 * s, y: cy - rowH * 0.42, w: cardW, h: rowH * 0.84 };
+      if (!it.base) this.roadRects[i - 1] = r;
+      const accent = isAura ? it.def?.colors[0] : it.def?.accent;
+      const equipped = !it.base && ((isAura && PROGRESS.aura === it.id) || (!isAura && this.game.lobby.slots[0]?.character === it.id));
+      ctx.fillStyle = got ? (equipped ? 'rgba(61,255,154,0.18)' : 'rgba(255,210,61,0.14)') : 'rgba(5,8,40,0.65)';
+      pathRoundRect(ctx, r.x, r.y, r.w, r.h, 12 * s);
+      ctx.fill();
+      ctx.lineWidth = (equipped ? 3 : 2) * s;
+      ctx.strokeStyle = equipped ? '#3dff9a' : got ? (accent || '#ffd23d') : 'rgba(255,255,255,0.18)';
+      ctx.stroke();
+      const ar = Math.min(r.h * 0.3, 20 * s);
+      if (it.base) {
+        const n = BASE_CHARACTER_IDS.length;
+        const step = Math.min(ar * 2.3, (r.w - 150 * s) / n);
+        BASE_CHARACTER_IDS.forEach((id, k) => {
+          const c = CHARACTERS[id];
+          drawAvatar(ctx, r.x + 24 * s + k * step, cy, Math.min(ar * 0.8, step * 0.38), '#3dd1ff', 0.4, { shape: c.shape, accent: c.accent, halo: false });
+        });
+        drawText(ctx, 'INICIO · 6 personajes', r.x + r.w - 12 * s, cy, { size: 12 * s, weight: '900', align: 'right', baseline: 'middle', color: '#3dff9a' });
+        return;
+      }
+      const ax = r.x + 14 * s + ar * 1.2;
+      ctx.save();
+      if (!got) ctx.globalAlpha = 0.45;
+      if (isAura) {
+        drawAura(ctx, ax, cy, ar * 0.75, it.def, this.t);
+        drawAvatar(ctx, ax, cy, ar * 0.75, got ? '#3dd1ff' : '#5b6390', 0.4, { halo: false });
+      } else {
+        drawAvatar(ctx, ax, cy, ar, got ? '#3dd1ff' : '#5b6390', this.t * (got ? 1.5 : 0) + 0.4, { shape: it.def.shape, accent: it.def.accent, halo: got });
+      }
+      ctx.restore();
+      const tx = r.x + 30 * s + ar * 2.4;
+      const title = isAura ? `✨ ${it.def.name}` : `${it.def.icon} ${it.def.name}`;
+      drawText(ctx, title, tx, cy - 10 * s, { size: Math.min(16 * s, (r.w - 150 * s) / 9), weight: '900', baseline: 'middle', color: got ? '#ffffff' : '#c7d2ff' });
+      drawText(ctx, isAura ? 'AURA (ESTÉTICA)' : `PERSONAJE · ${it.def.role.toUpperCase()}`, tx, cy + 12 * s, { size: 10 * s, weight: '900', baseline: 'middle', color: accent, alpha: got ? 1 : 0.6 });
+      const status = !got ? `🔒 ${it.at.toLocaleString('es-ES')} 🏆` : equipped ? '✓ PUESTO' : 'TOCA PARA USAR';
+      drawText(ctx, status, r.x + r.w - 12 * s, cy, { size: 12 * s, weight: '900', align: 'right', baseline: 'middle', color: !got ? '#ffb02e' : equipped ? '#3dff9a' : '#ffffff' });
+    });
+    ctx.restore();
+
+    // Botones para moverse por el camino
+    const bx = w - 50 * s;
+    const B = (this.roadBtns = {
+      up: { x: bx, y: top + 4 * s, w: 40 * s, h: 40 * s },
+      me: { x: bx, y: (top + bottom) / 2 - 20 * s, w: 40 * s, h: 40 * s },
+      down: { x: bx, y: bottom - 44 * s, w: 40 * s, h: 40 * s },
+    });
+    for (const [k, label] of [['up', '▲'], ['me', '🏆'], ['down', '▼']]) {
+      const r = B[k];
+      ctx.fillStyle = 'rgba(10,14,60,0.85)';
+      pathRoundRect(ctx, r.x, r.y, r.w, r.h, 12 * s);
+      ctx.fill();
+      ctx.lineWidth = 2 * s;
+      ctx.strokeStyle = '#3dd1ff';
+      ctx.stroke();
+      drawText(ctx, label, r.x + r.w / 2, r.y + r.h / 2 + 1, { size: 16 * s, weight: '900', align: 'center', baseline: 'middle' });
+    }
+    const help = w < 600 ? 'Arrastra o usa ▲▼ · 🏆 vuelve a tu posición' : 'Rueda del ratón, flechas o ▲▼ para moverte · 🏆 vuelve a tu posición · Cooperativo: +3 🏆/oleada (+30 si ganáis) · Infinita: sin tope · JcJ: ganar +12';
+    drawText(ctx, help, w / 2, h - 18 * s, { size: Math.min(11 * s, w / 70), weight: '600', align: 'center', baseline: 'middle', alpha: 0.75 });
+  }
+
 
   // ─── Modos de juego ──────────────────────────────────────
   updateModes(nav) {
@@ -8048,7 +8556,8 @@ class Menus {
     items.push(
       { id: 'play', label: 'JUGAR', color: '#ffc727', ink: '#2a1a00', sub: 'Solo o con mandos aquí' },
       { id: 'modes', label: 'MODOS', color: '#ff7ad9', ink: '#3a0630', sub: 'Supervivencia, JcJ, jefes…' },
-      { id: 'characters', label: 'PERSONAJES', color: '#3dff9a', ink: '#06311a', sub: '6 personajes para elegir' },
+      { id: 'road', label: `CAMINO DE TROFEOS · ${PROGRESS.trophies} 🏆`, color: '#ffd23d', ink: '#2a1a00', sub: 'Desbloquea personajes' },
+      { id: 'characters', label: 'PERSONAJES', color: '#3dff9a', ink: '#06311a', sub: 'Elige con quién jugar' },
       { id: 'friends', label: 'JUGAR CON AMIGOS', color: '#3dd1ff', ink: '#06263a', sub: 'Sala e invitaciones' },
       { id: 'create', label: 'CREAR SALA', color: '#3dd1ff', ink: '#06263a', sub: 'Online con código' },
       { id: 'join', label: 'UNIRSE A SALA', color: '#3dd1ff', ink: '#06263a', sub: 'Escribe el código' },
@@ -8100,6 +8609,7 @@ class Menus {
         else lobby.panel = true;
         break;
       case 'settings': this.enter('settings'); break;
+      case 'road': this.enter('road'); this.roadScroll = null; this.pendingTaps = []; break;
       case 'characters': g.openLobby(src); lobby.pickKind = 'character'; lobby.abilityPanel = true; break;
       case 'modes': this.enter('modes'); this.sel = Math.max(0, MODE_IDS.indexOf(g.lobby.mode)); break;
       case 'tutorial': this.enter('tutorial'); break;
@@ -8224,6 +8734,7 @@ class Menus {
     else if (st === 'settings') (this.keysMode ? this.drawKeys(ctx, w, h, s) : this.drawSettings(ctx, w, h, s));
     else if (st === 'tutorial') this.drawTutorial(ctx, w, h, s);
     else if (st === 'modes') this.drawModes(ctx, w, h, s);
+    else if (st === 'road') this.drawRoad(ctx, w, h, s);
   }
 
   drawBackButton(ctx, s, label = '◀ VOLVER') {
@@ -8243,7 +8754,7 @@ class Menus {
     pathRoundRect(ctx, -26 * s, -15 * s, 52 * s, 30 * s, 8 * s);
     ctx.fill();
     ctx.restore();
-    drawText(ctx, '2.0', bx, cy - size * s * 0.42, { size: 18 * s, weight: '900', align: 'center', baseline: 'middle', color: '#2a1a00' });
+    drawText(ctx, '2.1', bx, cy - size * s * 0.42, { size: 18 * s, weight: '900', align: 'center', baseline: 'middle', color: '#2a1a00' });
   }
 
   drawMain(ctx, w, h, s) {
@@ -8288,7 +8799,7 @@ class Menus {
     });
     const hint = this.game.input.usingGamepad ? '✚ / stick: elegir · A: aceptar' : this.game.input.usingTouch ? 'Toca una opción' : '↑ ↓: elegir · Intro: aceptar · o haz clic';
     drawText(ctx, hint, w / 2, h - 10 * s, { size: 11 * s, weight: '600', align: 'center', baseline: 'bottom', alpha: 0.6 });
-    drawText(ctx, `🏆 ${this.game.best}`, w - 16 * s, 16 * s, { size: 15 * s, weight: '800', align: 'right', color: '#ffd23d' });
+    drawText(ctx, `🏆 ${PROGRESS.trophies}   ⭐ ${this.game.best}`, w - 16 * s, 16 * s, { size: 15 * s, weight: '800', align: 'right', color: '#ffd23d' });
     if (this.game.input.gamepads.blocked) {
       drawText(ctx, '🎮 Esta vista no permite mandos ni online: usa la web del juego o el archivo descargado', w / 2, h - 28 * s, { size: 11 * s, weight: '700', align: 'center', color: '#ffd23d' });
     }
@@ -8519,6 +9030,8 @@ const { GameMap } = __mod["src/world/GameMap.js"];
 const { MAPS, DEFAULT_MAP } = __mod["src/data/maps.js"];
 const { MODES, DEFAULT_MODE, PVP, TEAM_COLORS, TEAM_NAMES } = __mod["src/data/modes.js"];
 const { BotController } = __mod["src/ai/BotController.js"];
+const { PROGRESS, addTrophies } = __mod["src/core/Progress.js"];
+const { CHARACTERS } = __mod["src/data/characters.js"];
 const { ENEMY_TYPES } = __mod["src/data/enemies.js"];
 const { Player } = __mod["src/entities/Player.js"];
 const { Enemy } = __mod["src/entities/Enemy.js"];
@@ -8539,7 +9052,7 @@ const { inRect } = __mod["src/render/draw.js"];
 const { Sound } = __mod["src/audio/Sound.js"];
 const { SETTINGS, quality, onSettingsChange } = __mod["src/core/Settings.js"];
 const { applyAimHelp } = __mod["src/systems/AimAssist.js"];
-const MENU_STATES = new Set(['menu', 'settings', 'tutorial', 'modes']);
+const MENU_STATES = new Set(['menu', 'settings', 'tutorial', 'modes', 'road']);
 
 const BEST_KEY = 'neonArena.best';
 
@@ -8811,7 +9324,45 @@ class Game {
     if (s === 'gameover') {
       Sound.startMusic('off');
       Sound.play('gameOver');
+      if (prev !== 'gameover') this.awardTrophies();
     }
+    if (s === 'playing' && prev !== 'paused') this.trophyGain = null;
+  }
+
+  // ─── Camino de trofeos ─────────────────────────────────────
+  /** Mi jugador en este dispositivo (el que suma trofeos). */
+  get profilePlayer() {
+    return this.me ?? this.players.find((p) => !p.isBot && !p.controller.binding?.startsWith('net:')) ?? null;
+  }
+
+  /** Cuántos trofeos da (o quita) la partida que acaba de terminar. */
+  trophyDelta() {
+    const m = this.mode;
+    const me = this.profilePlayer;
+    if (!me || m.practice) return 0;
+    if (m.pvp) {
+      const res = this.result || {};
+      if (/EMPATE/.test(res.title || '')) return 2;
+      if (m.teams) return res.team === me.team ? 10 : -4;
+      const order = [...this.players].sort((a, b) => (b.pvpKills || 0) - (a.pvpKills || 0) || (a.deaths || 0) - (b.deaths || 0));
+      const rank = order.indexOf(me);
+      if (m.id === 'duel') return rank === 0 ? 12 : -4;
+      return [12, 6, 1, -3][rank] ?? 0;
+    }
+    // Cooperativo: nunca se pierden trofeos
+    const w = Math.max(0, this.waves.wave - (this.result?.win ? 0 : 1));
+    if (m.bossRush) return Math.min(60, w * 8) + (this.result?.win ? 40 : 0);
+    // Infinita: sin tope, y cuanto más lejos llegas, más da cada oleada
+    if (m.waves === Infinity) return w * 3 + Math.floor((w * w) / 12);
+    return Math.min(60, w * 3) + (this.result?.win ? 30 : 0);
+  }
+
+  awardTrophies() {
+    const delta = this.trophyDelta();
+    const before = PROGRESS.trophies;
+    const fresh = delta ? addTrophies(delta) : [];
+    this.trophyGain = { delta: PROGRESS.trophies - before, total: PROGRESS.trophies, unlocks: fresh };
+    if (fresh.length) setTimeout(() => Sound.play('waveClear'), 900);
   }
 
   /** ¿Algún jugador usa la pantalla táctil? (para mostrar joysticks) */
@@ -8932,7 +9483,7 @@ class Game {
     this.newBest = false;
     this.result = null;
 
-    controllers.forEach((c, i) => this.addPlayer(c, entries[i].ability, entries[i].name, entries[i].character));
+    controllers.forEach((c, i) => this.addPlayer(c, entries[i].ability, entries[i].name, entries[i].character, entries[i].aura));
     this.waves.reset();
     this.input.resetTransient();
     const n = this.players.length;
@@ -8964,7 +9515,7 @@ class Game {
     }
   }
 
-  addPlayer(controller, ability, name, character) {
+  addPlayer(controller, ability, name, character, aura) {
     const i = this.players.length;
     const spawns = this.mode.pvp ? this.map.pvpSpawns : this.map.playerSpawns;
     const spawn = spawns[i % spawns.length];
@@ -8972,7 +9523,7 @@ class Game {
     let color = colors[i % colors.length];
     const team = this.mode.teams ? i % 2 : i;
     if (this.mode.teams) color = TEAM_COLORS[team];
-    const p = new Player({ id: i + 1, x: spawn.x, y: spawn.y, color, controller, ability, character });
+    const p = new Player({ id: i + 1, x: spawn.x, y: spawn.y, color, controller, ability, character, aura });
     p.team = team;
     p.isBot = !!controller.isBot;
     if (p.isBot && this.mode.bots === 'easy') { p.maxHp = Math.round(p.maxHp * 0.7); p.hp = p.maxHp; }
@@ -9196,6 +9747,7 @@ class Game {
     p.hp = p.maxHp;
     p.invuln = PVP.spawnShield;
     p.resetWeapons?.();
+    p.revived = false;
     this.effects.ring(p.x, p.y, p.color, 90, 0.5);
     this.effects.burst(p.x, p.y, { color: p.color, count: 30, speed: 260, life: 0.6 });
   }
@@ -9304,7 +9856,7 @@ class Game {
     for (const pd of msg.players) {
       const mine = pd.id === msg.you;
       const p = new Player({
-        id: pd.id, x: this.map.width / 2, y: this.map.height / 2, color: pd.color, ability: pd.ability, character: pd.character,
+        id: pd.id, x: this.map.width / 2, y: this.map.height / 2, color: pd.color, ability: pd.ability, character: pd.character, aura: pd.aura,
         controller: mine ? this.input.createController(this.lobby.slots[0]?.device || this.input.fallbackDevice) : remote,
       });
       p.name = pd.name || `Jugador ${pd.id}`;
@@ -9434,6 +9986,7 @@ class Game {
       case 'settings':
       case 'tutorial':
       case 'modes':
+      case 'road':
         this.menus.update(dt);
         break;
       case 'lobby':
